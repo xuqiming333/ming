@@ -1,10 +1,13 @@
-# 如何本地使用ZTERM
+# 如何在本地使用ZTERM(本地)
 1.在终端下进入到 zterm_Web_Xterm\release文件夹下执行./witty run bash命令  
-2.打开浏览器输入本地的IP:8080/login进入登录页面
+2.打开浏览器输入本地的IP:8080/login进入登录页面 例如 https://172.23.195.114:8080/login
+# 如何在本地使用ZTERM(服务器)
+1.在终端下进入到 zterm_Web_Xterm\release文件夹下执行./witty run -p 443命令  
+2.打开浏览器输入 http://webssh.zterm.ai/login
 # 如何修改ZTERM之后重新编译
-每当修改了内容时候都需要执行一次这个命令
-1.进入zterm_Web_Xterm文件夹，执行go build -o ./release/witty命令
-2.打开浏览器进入 IP:8080/login,(刷新一下）
+每当修改了内容时候都需要执行一次这个命令  
+1.进入zterm_Web_Xterm文件夹，执行go build -o ./release/witty命令  
+2.打开浏览器进入 IP:8080/login,(刷新一下)  
 # 前端如何跟后端交互的
 **文件位置**：跟后端交互的文件在 zterm_Web_Xterm\assets\type.js里  
 
