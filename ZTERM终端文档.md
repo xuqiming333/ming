@@ -12,7 +12,7 @@
 
 **什么是axios**：它的作用是通过一个后端接口来请求服务器的数据之后通过结合promise的.then方法获取到服务器的数据，它返回一个promise对象，promise对象通过.then方法可以获取到服务器传递过来的数据。
 
-前端跟后端交互主要用了axios获取服务端的数据之后和promise结合async，await来让代码异步同步化(也就是说我在执行let res=await getData()方法时候后面的代码会暂停执行，等到服务器返回数据之后才会执行后续代码,axios.get()方法返回一个promise对象，这个promise对象通过.then(res=>{res}) res就是后端返回的数据对象 )。  
+前端跟后端交互主要用了axios获取服务端的数据之后和promise结合async，await来让代码异步同步化(也就是说我在执行let res=await getData()方法时候后面的代码会暂停执行，等到服务器返回数据之后才会执行后续代码,axios.get()方法返回一个promise对象，这个promise对象通过.then(res=>{return Promise.resolve(res)}) res就是后端返回的数据对象 )。  
 **1.主要关注createRobotChatBox()，getData()这两个方法**  
 
 ## getData()和createRobotChatBox()方法的作用及原理及流程
