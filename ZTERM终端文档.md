@@ -19,9 +19,9 @@
   }  
    params是参数，这个key就是参数名字，textarea.textContent就是用户输入框里的内容(当用户按下回车或者点击搜索按钮时候获取到的输入框里的内容，是一个字符串比如 输入框里输入你好，那么textarea.textContent就是你好)  
    
-   这个参数就是用户在输入框输入的内容之后通过axios发送请求时把参数内容传递给后台  
+   用户在输入框输入的内容之后通过axios发送请求时把参数内容传递给后台  
    
-   return Promise.resolve(res) 如果服务器返回数据回来之后将res也就是数据对象用Promise包裹一下然后返回，然后通过await 来修饰这个函数let res=await getData()，这个res就是服务器返回的数据对象  
+   return Promise.resolve(res) 如果服务器返回数据回来之后将res也就是数据对象用Promise包裹一下然后返回(getData()返回值就是Promise.resolve(res))，然后通过await 来修饰这个函数let res=await getData()，这个res就是服务器返回的数据对象  
    
    ```
    //模拟服务器获取数据
