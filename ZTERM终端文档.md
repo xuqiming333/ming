@@ -1,5 +1,5 @@
 # 如何本地使用ZTERM
-1.在终端下进入到 zterm_Web_Xterm\release文件夹下执行./witty run bash命令
+1.在终端下进入到 zterm_Web_Xterm\release文件夹下执行./witty run bash命令  
 2.打开浏览器输入本地的IP:8080/login进入登录页面
 # 如何修改ZTERM之后重新编译
 每当修改了内容时候都需要执行一次这个命令
