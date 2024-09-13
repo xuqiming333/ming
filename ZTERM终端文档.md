@@ -13,13 +13,16 @@
 1.主要关注createRobotChatBox()，getData()这两个方法  
 ## getData()和createRobotChatBox()方法的作用及原理
   1.const rb_content=document.querySelectorAll('.robot_content')，const textarea=document.querySelector('.textarea');这两个代码是获取DOM用的  
-  这个'https://apis.tianapi.com/zhanan/index'就是后端提供的接口地址  
+  这个 https://apis.tianapi.com/zhanan/index 就是后端提供的接口地址  
   params: {    
       key:textarea.textContent  
   }  
    params是参数，这个key就是参数名字，textarea.textContent就是用户输入框里的内容(当用户按下回车或者点击搜索按钮时候获取到的输入框里的内容，是一个字符串比如 输入框里输入你好，那么textarea.textContent就是你好)  
+   
    这个参数就是用户在输入框输入的内容之后通过axios发送请求时把参数内容传递给后台  
+   
    return Promise.resolve(res) 如果服务器返回数据回来之后将res也就是数据对象用Promise包裹一下然后返回，然后通过await 来修饰这个函数let res=await getData()，这个res就是服务器返回的数据对象  
+   
    ```
    //模拟服务器获取数据
   function getData(){
@@ -41,8 +44,9 @@
     })
   }
 ```
-  2.createRobotChatBox()这个方法里只关注  
-   res就是通过axios请求服务器返回的数据对象，res.status是正常时候的状态码(必须由后端提供)，当服务器返回内容时候通过执行printText(rchatDom,服务器返回的内容)来让屏幕上显示打字机效果和服务器返回的内容  
+  2.createRobotChatBox() 
+   res就是通过axios请求服务器返回的数据对象，res.status是正常时候的状态码(必须由后端提供)，当服务器返回内容时候通过执行printText(rchatDom,服务器返回的内容)来让屏幕上显示打字机效果和服务器返回的内容
+   这个方法里只关注下面的代码 
    ```
    //模拟从服务器获取数据
     try {
