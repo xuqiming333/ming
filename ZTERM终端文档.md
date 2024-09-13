@@ -17,7 +17,7 @@
 
 ## getData()和createRobotChatBox()方法的作用及原理及流程
   用户按了回车或者点击了搜索按钮会触发getData()和createRobotChatBox()  
-  ***getData()需要关注的***
+  ### getData()需要关注的
   1.const rb_content=document.querySelectorAll('.robot_content')，const textarea=document.querySelector('.textarea');这两个代码是获取DOM用的  
   这个 https://apis.tianapi.com/zhanan/index 就是后端提供的接口地址  
   params: {    
@@ -50,7 +50,7 @@
     })
   }
 ```
-  2.***createRobotChatBox()需要关注的*** 
+  ### createRobotChatBox()需要关注的 
   
    1.createRobotChatBox()方法里只关注下面的代码  
   
